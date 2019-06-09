@@ -7,20 +7,47 @@
             .header{
                 white-space: nowrap;
             }
+            .search{
+                top:200px;
+                position: relative;
+                margin: 0 auto;
+                border:1px solid #F00;
+                text-align:center;
+                width: 300px;
+            }
+            #dropdown{
+                width:100px;
+                float: left;
+            }
+            #inputbox{
+                float: left;
+            }
         </style>
     </head>
     <body>
         <div class="bkground">
             <div class="header">
                 <!-- 通过js控制。如果没有登录则显示“请登录”，否则显示欢迎 -->
+                
             </div>
             <div class="search">
                 <!-- 静态的就好了 -->
                 <!-- 下拉菜单，可以按书名作者isbn搜索，应当支持模糊搜索 -->
                 <!-- 搜索框 -->
                 <!-- 搜索按钮 -->
+                <div id="dropdown" >
+                    <select>
+                        <option value="ISBN">ISBN</option>
+                        <option value="bkname">书名</option>
+                        <option value="writer">作者</option>
+                    </select>
+                </div>
+                <div id="inputbox">
+                    <input type="text" id="search-input" placeholder="Text in book name here">
+                    <input type="button" id="search-btn" value="检索">
+                </div>
+                <div id="id4" style="clear:both"></div> 
             </div>
-
         </div>
     </body>
 
