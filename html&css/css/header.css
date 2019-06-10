@@ -1,0 +1,20 @@
+/* 首页右侧顶部的个人信息栏 */
+.header {
+    background-color: aliceblue;
+}
+.header-text {
+    padding-top: 20px;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+.welcome1 {
+    font-size: 50px;
+    display: inline;
+}
+.welcome2 {
+    display: inline;
+}
+.header-info-area {
+    display: inline;
+    font-size: 28px;
+}
