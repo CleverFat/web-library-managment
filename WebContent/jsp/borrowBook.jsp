@@ -42,6 +42,7 @@ String msg="";
         Statement stmt1=con.createStatement();
         Statement stmt2=con.createStatement();
         String sql = String.format("update books, bookrack set bookrack.current_num=bookrack.current_num-1 where books.isbn=bookrack.isbn and books.bid=%d", bid);
+        
         int cnt = stmt.executeUpdate(sql);
         sql="select count(*) as totalCount from borrow_list";
         ResultSet rs=stmt1.executeQuery(sql);
@@ -51,7 +52,7 @@ String msg="";
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dt = format.format(date);
         System.out.println(bid);
-        sql=String.format("insert into borrow_list values(%d,%d,'%s','%s','%s',false,false)",num+1,bid,uid,dt,dt);
+        sql=String.format("insert into borrow_list values(%d,%d,'%s','%s','%s',0,0)",num+1,bid,uid,dt,dt);
         cnt = stmt2.executeUpdate(sql);
         if(cnt > 0)
             msg = "借书成功";
